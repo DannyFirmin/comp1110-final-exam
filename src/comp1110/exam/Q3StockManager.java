@@ -28,7 +28,6 @@ public class Q3StockManager {
         // FIXME Question 3iib: complete this function
     }
 
-
     /**
      * Return the name of a product.
      *
@@ -107,7 +106,7 @@ public class Q3StockManager {
      * @param actual The quantity actually in the store
      * @return The stock loss or gain (new current – old current)
      */
-    public double setActualStock(String sku, int actual) {
+    public int setActualStock(String sku, int actual) {
         return 0;  // FIXME Question 3iik: complete this function
     }
 

@@ -132,7 +132,7 @@ public class Q3SimpleStockManagerTest {
         sm.addStock("1234", 100);
         sm.setTargetStock("1234", 90);
         sm.sale("1234",14);
-        double loss = sm.setActualStock("1234", 50);
+        int loss = sm.setActualStock("1234", 50);
         assertTrue("Expected difference of -36, but got "+loss, loss == -36);
     }
 
