@@ -47,7 +47,7 @@ public class Q3StockManagerTest {
         sm.newVendor("K033", "XYZ Pty Ltd");
         sm.newItem("1234", "A035", "Jam", 3.25);
         sm.newItem("5678", "K033", "Coffee", 4.37);
-        sm.newItem("5345", "A033", "Chocolate", 5.99);
+        sm.newItem("5345", "K033", "Chocolate", 5.99);
 
         String name = sm.getItemVendorName("5678");
         assertTrue("Expected 'XYZ Pty Ltd', but got '"+name, name.equals("XYZ Pty Ltd"));
