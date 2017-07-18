@@ -2,6 +2,8 @@
 
 This repo contains an IntelliJ project that you can use as
  part of the **sample** end-of-year exam.
+ 
+ You will find the sample exam [here](https://cs.anu.edu.au/courses/comp1110/exam/sample/1110-exam.html).
 
 You will find six questions in the exam.  Among these, questions, 1,
 3, 4, and 5 have coding elements, totalling eight (sub)questions, and
