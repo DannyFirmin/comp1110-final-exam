@@ -1,4 +1,4 @@
-# COMP1110/1140/1510/6710 End-Of-Year Exam
+# COMP1110/1140/6710 End-Of-Year Exam
 
 This repo contains an IntelliJ project that you can use as
  part of the **sample** end-of-year exam.
