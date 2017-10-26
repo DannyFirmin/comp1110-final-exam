@@ -11,7 +11,7 @@ package comp1110.exam;
  * rules:
  *   1. It may move from its current square to any of the eight nearby squares
  *      reachable by either: moving sideways two and vertically one; or vertically
- *      one and sideways two.  Given the board below, a piece at '*' may move to
+ *      two and sideways one.  Given the board below, a piece at '*' may move to
  *      any of the positions marked with an 'X'.
  *
  *       . X . X .
