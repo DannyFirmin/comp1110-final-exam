@@ -4,7 +4,8 @@ package comp1110.exam;
  * COMP1110 Final Exam, Question 1ii
  *
  * Discover all victims (reachable white pieces), given a the initial board
- * and a black knight placed at a particular start position.
+ * and a black knight placed at a particular start position.  The initial board
+ * may contain black and/or white pieces in addition to the black knight.
  *
  * A black knight may tour an 8 x 8 chess board according to the following
  * rules:
@@ -21,7 +22,7 @@ package comp1110.exam;
  *
  *   2. It may not move to a square off the 8 x 8 board
  *
- *   3. It may not move to a square already occupied
+ *   3. It may not move to a square already occupied by another piece
  *
  * The number of 'victims' of the black knight is equal to all of the
  * white pieces that it could ever have reached on a tour according to the
