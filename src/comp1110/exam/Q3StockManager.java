@@ -10,7 +10,7 @@ public class Q3StockManager {
      * A new vendor has been introduced.
      *
      * @param vid The vid of the new vendor vendor
-     * @param name The product’s name
+     * @param name The vendor’s name
      */
     public void newVendor(String vid, String name) {
         // FIXME Question 3iia: complete this function
