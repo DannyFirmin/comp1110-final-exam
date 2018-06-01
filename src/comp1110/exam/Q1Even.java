@@ -15,11 +15,9 @@ public class Q1Even {
      * {2, 4}
      */
     public static int[] even(int n) {
-        int[] d = new int[2];
-        for (int i = 0; i <= n-1; i = i + 1) {
-            for (int j = 2; j <= i; j = j + 2) {
-                d[i] = j;
-            }
+        int[] d = new int[n/2];
+        for (int i = 0; i < n/2; i = i + 1) {
+                d[i] = 2*i+2;
         }
         return d;
     }
