@@ -12,6 +12,6 @@ public class Q5Hash {
      * @return An integer hash of value in the range 0 ... buckets - 1.
      */
     public static int hash(int value, int buckets) {
-        return -1; // FIXME Question 5iv: complete this function
+        return Math.abs(value) % buckets;
     }
 }

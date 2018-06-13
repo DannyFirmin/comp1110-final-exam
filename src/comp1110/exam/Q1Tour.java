@@ -65,6 +65,6 @@ public class Q1Tour {
     public int tourVictims(String start) {
         int col = (start.charAt(0)-'A');
         int row = (start.charAt(1)-'1');
-        return -1;  // FIXME Question 1iii: complete this function
+        return 1;  // FIXME Question 1iii: complete this function
     }
 }

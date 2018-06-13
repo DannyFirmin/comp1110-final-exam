@@ -16,16 +16,18 @@ public class Q4ArrayList<T> {
      * @param value The value to be added.
      */
     public void add(T value) {
-        if ((elements + 1) >= values.length) {
-            T[] newValues = (T[]) new Object[(int) (values.length * GROWTH_FACTOR)];
-            for (int i = 0; i < elements; i++) {
-                newValues[i] = values[i];
+        /* Unimplemented.  Q4 i) [7 Marks] */
+        if(elements >= values.length){
+            T[] newValues = (T[])new Object[(int)(values.length * GROWTH_FACTOR)];
+            for (int i = 0; i < elements; i++){
+                newValues[i]= values[i];
             }
             values = newValues;
+
         }
-        values[elements] = value;
-        elements = elements + 1;
-        /* Unimplemented.  Q4 i) [7 Marks] */
+            values[elements] = value;
+            elements++;
+
     }
 
     /**
@@ -34,28 +36,23 @@ public class Q4ArrayList<T> {
      * @param index
      */
     public void remove(int index) {
-        if (elements>=1 && index>=0 && index<=elements-1){
-            if ( (elements - 1) < (int) (values.length / GROWTH_FACTOR)) {
-                T[] newValues = (T[]) new Object[(int) (values.length )];
-
-                int j = 0;
-                for (int i = 0; i < elements; i++) {
-                    if (i == index) continue;
-                    newValues[j++] = values[i];
-                }
-                values = newValues;
-            } else {
-                for (int i = index; i < (elements - 1); i++) {
-                    values[i] = values[i + 1];
-                }
-            }
-            elements--;
-        } else
-           {
-               throw new IndexOutOfBoundsException();
-           }}
         /* Unimplemented. Q4 ii) [7 Marks] */
+        if(index >= elements || index < 0) throw  new IndexOutOfBoundsException();
+        if(elements <= values.length/GROWTH_FACTOR){
+            T[] newValues = (T[]) new Object[values.length/2];
+            int j =0;
+            for (int i = 0; i<elements;i++){
+                if (i==index) continue;
+                newValues[j++]=values[i];
+            }
+        }
+            for (int i = index; i < elements - 1; i++) {
+                values[i] = values[i + 1];
+            }
+         //   values[elements-1]=null;
 
+        elements--;
+    }
 
     /**
      * @param index
@@ -78,12 +75,14 @@ public class Q4ArrayList<T> {
      * Reverse the order of the elements of the list.
      */
     public void reverse() {
-        for (int i = 0; i < elements / 2; i++) {
-            T temp = values[i];
-            values[i] = values[elements - i - 1];
-            values[elements - i - 1] = temp;
-        }
         /* Unimplemented. Q4 iii) [6 Marks] */
+        T[] tmp = (T[]) new Object[elements];
+        System.arraycopy(values,0,tmp,0,elements);
+        for(int i= 0; i<elements/2;i++){
+         //   T tmp = values[i];
+            values[i] = values[elements-i-1];
+            values[elements-i-1]= tmp[i];
+        }
     }
 
     /**
