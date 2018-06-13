@@ -34,23 +34,28 @@ public class Q4ArrayList<T> {
      * @param index
      */
     public void remove(int index) {
-        if ((elements - 1) < (int) (values.length / GROWTH_FACTOR)) {
-            T[] newValues = (T[]) new Object[(int) (values.length / GROWTH_FACTOR)];
+        if (elements>=1 && index>=0 && index<=elements-1){
+            if ( (elements - 1) < (int) (values.length / GROWTH_FACTOR)) {
+                T[] newValues = (T[]) new Object[(int) (values.length )];
 
-            int j = 0;
-            for (int i = 0; i < elements; i++) {
-                if (i == index) continue;
-                newValues[j++] = values[i];
+                int j = 0;
+                for (int i = 0; i < elements; i++) {
+                    if (i == index) continue;
+                    newValues[j++] = values[i];
+                }
+                values = newValues;
+            } else {
+                for (int i = index; i < (elements - 1); i++) {
+                    values[i] = values[i + 1];
+                }
             }
-            values = newValues;
-        } else {
-            for (int i = index; i < (elements - 1); i++) {
-                values[i] = values[i + 1];
-            }
-        }
-        elements--;
+            elements--;
+        } else
+           {
+               throw new IndexOutOfBoundsException();
+           }}
         /* Unimplemented. Q4 ii) [7 Marks] */
-    }
+
 
     /**
      * @param index
